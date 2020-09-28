@@ -1,3 +1,10 @@
+.App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .eyes {
     position: absolute;
     pointer-events: none;
@@ -17,8 +24,7 @@
     position: absolute;
     height: 460px;
     width: 460px;
-    /*pointer-events: none;*/
 
-    fill: white;
-    stroke: black;
+    fill: transparent;
+    stroke: transparent;
 }
