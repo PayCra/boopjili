@@ -21,12 +21,16 @@ class App extends Component {
         this.setState({crazy: true})
     }
 
+    handleMouseLeave = () => {
+        this.setState({crazy: false})
+    }
+
     render() {
         return (
             <div className='App'>
-                <Nose number={number}/>
+                <Nose number={number} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}/>
                 <Eyes number={number}/>
-                <img onClick={this.handleClick} src={'纪李/JiLi' + this.state.link +'.jpg'} alt={'Unable to load Ji Li'}/>
+                <img src={'纪李/JiLi' + this.state.link +'.jpg'} alt={'Unable to load Ji Li'}/>
             </div>
         );
     }
