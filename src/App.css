@@ -1,16 +1,24 @@
 .eyes {
     position: absolute;
-    /*pointer-events: none;*/
+    pointer-events: none;
     height: 460px;
     width: 460px;
 
-    fill: white;
-    stroke: black;
-
-    /*fill: white;*/
-    /*stroke: black;*/
+    fill: transparent;
+    stroke: transparent;
 }
 
-.eyes:hover {
-    fill: red
+.crazyEyes {
+    fill: white;
+    stroke: black;
+}
+
+.nose {
+    position: absolute;
+    height: 460px;
+    width: 460px;
+    pointer-events: none;
+
+    fill: white;
+    stroke: black;
 }
