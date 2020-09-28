@@ -27,11 +27,14 @@ class App extends Component {
 
     render() {
         return (
-            <div className='App'>
+            <>
+            <div className='instructions'>boop JiLi's nose to change the picture</div>
+        <div className='body'>
                 <Nose number={number} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}/>
-                <Eyes number={number}/>
+                <Eyes number={number} crazy={this.state.crazy ? "crazyEyes" : "eyes"}/>
                 <img src={'纪李/JiLi' + this.state.link +'.jpg'} alt={'Unable to load Ji Li'}/>
             </div>
+                </>
         );
     }
 }

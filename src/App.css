@@ -1,8 +1,13 @@
-.App {
-    height: 100vh;
+.instructions {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
 }
 
 .eyes {
@@ -16,8 +21,27 @@
 }
 
 .crazyEyes {
-    fill: white;
+    position: absolute;
+    pointer-events: none;
+    height: 460px;
+    width: 460px;
+    fill: red;
     stroke: black;
+
+    /*animation:spin 4s linear infinite;*/
+    animation: blink 1s step-start 0s infinite;
+}
+
+/*@keyframes spin {*/
+/*    100% {*/
+/*        transform:rotate(360deg);*/
+/*    }*/
+/*}*/
+
+@keyframes blink {
+    50% {
+        fill:white;
+    }
 }
 
 .nose {
