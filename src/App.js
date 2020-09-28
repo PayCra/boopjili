@@ -28,7 +28,7 @@ class App extends Component {
     render() {
         return (
             <>
-            <div className='instructions'>boop JiLi's nose to change the picture</div>
+            <div className='instructions'>boop Ji Li's nose to change the picture</div>
         <div className='body'>
                 <Nose number={number} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}/>
                 <Eyes number={number} crazy={this.state.crazy ? "crazyEyes" : "eyes"}/>
