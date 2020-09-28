@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/boopjili/static/css/main.4f67b22a.chunk.css",
+    "main.js": "/boopjili/static/js/main.ec1a826e.chunk.js",
+    "main.js.map": "/boopjili/static/js/main.ec1a826e.chunk.js.map",
+    "runtime-main.js": "/boopjili/static/js/runtime-main.fcda9b91.js",
+    "runtime-main.js.map": "/boopjili/static/js/runtime-main.fcda9b91.js.map",
+    "static/js/2.6ebb8a85.chunk.js": "/boopjili/static/js/2.6ebb8a85.chunk.js",
+    "static/js/2.6ebb8a85.chunk.js.map": "/boopjili/static/js/2.6ebb8a85.chunk.js.map",
+    "index.html": "/boopjili/index.html",
+    "precache-manifest.571e1a181c9825d96c1c21046dfb3a6e.js": "/boopjili/precache-manifest.571e1a181c9825d96c1c21046dfb3a6e.js",
+    "service-worker.js": "/boopjili/service-worker.js",
+    "static/css/main.4f67b22a.chunk.css.map": "/boopjili/static/css/main.4f67b22a.chunk.css.map",
+    "static/js/2.6ebb8a85.chunk.js.LICENSE.txt": "/boopjili/static/js/2.6ebb8a85.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fcda9b91.js",
+    "static/js/2.6ebb8a85.chunk.js",
+    "static/css/main.4f67b22a.chunk.css",
+    "static/js/main.ec1a826e.chunk.js"
+  ]
+}
