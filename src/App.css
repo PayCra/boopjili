@@ -25,11 +25,11 @@
     pointer-events: none;
     height: 460px;
     width: 460px;
-    fill: red;
+    fill: white;
     stroke: black;
 
     /*animation:spin 4s linear infinite;*/
-    animation: blink 1s step-start 0s infinite;
+    animation: blink 1s step-start 0.5s infinite;
 }
 
 /*@keyframes spin {*/
@@ -40,15 +40,38 @@
 
 @keyframes blink {
     50% {
-        fill:white;
+        fill:red;
+        filter: drop-shadow(0px 0px 5px red);
+        stroke: transparent;
     }
 }
 
-.nose {
+.hardMode {
     position: absolute;
     height: 460px;
     width: 460px;
 
     fill: transparent;
     stroke: transparent;
+}
+
+.easyMode {
+    position: absolute;
+    height: 460px;
+    width: 460px;
+
+    fill: white;
+    stroke: black;
+}
+
+.side {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 460px;
+}
+
+.modeLabel {
+    padding-bottom: 1px;
 }
