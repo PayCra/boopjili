@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
+import './eyePositions.css';
 import Eyes from "./Components/Eyes";
 import Nose from "./Components/Noses";
 import ToggleButton from 'react-toggle-button'
+import Slider from '@material-ui/core/Slider';
 
 let number = Math.floor(Math.random() * 5)
 
@@ -11,7 +13,8 @@ class App extends Component {
     state = {
         link: number,
         crazy: false,
-        mode: 'hardMode'
+        mode: 'hardMode',
+        eyesMode: 1
     }
 
     handleClick = () => {
@@ -31,7 +34,24 @@ class App extends Component {
         this.setState({value: !value, mode: (value ? 'hardMode' : 'easyMode')})
     }
 
+    handleSlide = (event, value) => {
+        this.setState({eyesMode: value})
+    }
+
     render() {
+
+        let eyeModes = [{value: 0, label: "off"}, {value: 1, label: "normal"}, {value: 2, label: "crazy"}];
+
+        let mySlider = <Slider
+            className={'mySlider'}
+            max={2}
+            defaultValue={1}
+            step={null}
+            valueLabelDisplay="off"
+            marks={eyeModes}
+            onChange={this.handleSlide}
+        />
+
         return (
             <>
                 <div className='instructions'>boop Ji Li's nose to change the picture
@@ -41,11 +61,16 @@ class App extends Component {
                     <div>
                         <Nose mode={this.state.mode} number={number} onClick={this.handleClick}
                               onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}/>
-                        <Eyes number={number} crazy={this.state.crazy ? "crazyEyes" : "eyes"}/>
+                        <Eyes number={number}
+                              crazy={this.state.crazy ? "eyesMode" + this.state.eyesMode : "eyesMode0"}/>
                         <img src={'纪李/JiLi' + this.state.link + '.jpg'} alt={'Unable to load Ji Li'}/>
                     </div>
                     <div className='side'>
-                        <label className='modeLabel'>Easy mode:</label>
+                        <div className="eyeModeSlider">
+                        <label>Eye mode:</label>
+                        {mySlider}
+                        </div>
+                        <label className='modeLabelDifficulty'>Easy mode:</label>
                         <ToggleButton value={this.state.value || false} onToggle={this.handleToggle}/>
                     </div>
                 </div>
